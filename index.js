@@ -36,7 +36,7 @@ const channels = data.map(d => ({
     src: `./sounds/${d}.ogg`,
     autoplay: false,
     loop: true,
-    preload: true
+    preload: false
   }),
   name: d,
   playing: false
