@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paperplane - Whisper</title>
     <link rel="stylesheet" href="./index.css" />
+    <script src="./howler.js"></script>
     <script src="./index.js"></script>
   </head>
-  <body>
+  <body onload="init()">
     <div class="centered">
-      <h1 onclick="egg()">Whisper</h1>
+      <h1 id="t" onclick="egg()">Whisper</h1>
     </div>
     <div class="root">
       <ul type="none">
