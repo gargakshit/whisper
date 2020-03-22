@@ -1,9 +1,9 @@
 let playing = [];
 
-function play(name) {
+async function play(name) {
   if (playing.filter(p => p.name === name).length === 1) {
     const audio = playing.filter(p => p.name === name)[0].audio;
-    audio.pause();
+    await audio.pause();
 
     playing = playing.filter(p => p.name !== name);
 
@@ -12,7 +12,7 @@ function play(name) {
     const audio = new Audio(`./sounds/${name}.ogg`);
     audio.loop = true;
 
-    audio.play();
+    await audio.play();
 
     playing.push({
       name,
